@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.a55014.mytest.WaterContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a55014.mytest.MainActivity">
+
+    <!--<com.example.a55014.mytest.WaterView-->
+    <!--android:id="@+id/watery"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:src="@mipmap/water" />-->
+
+</com.example.a55014.mytest.WaterContainer>
