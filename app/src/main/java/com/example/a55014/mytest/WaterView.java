@@ -83,6 +83,7 @@ public class WaterView extends View {
         mTextPaint.setStyle(Paint.Style.FILL);
         float width = mTextPaint.measureText(text);
         canvas.drawText(text, mMWidth / 2 - width / 2, (float) mHeight * 0.65f, mTextPaint);
+
         doRepeatAnim();
         this.setOnClickListener(new OnClickListener() {
             @Override
@@ -107,32 +108,10 @@ public class WaterView extends View {
 
     private void doRepeatAnim() {
         ObjectAnimator animator = ObjectAnimator.ofFloat(this, "translationY", -padding, padding, -padding);
-//        ObjectAnimator animator = ObjectAnimator.ofFloat(this, "translationY", 0, padding, -padding, 0);
-//        switch (index % 2) { //不一样的浮动
-//            case 1:
-//                animator = ObjectAnimator.ofFloat(this, "translationY", startHeight - padding, startHeight + padding, startHeight - padding);
-//                break;
-//            case 0:
-//                animator = ObjectAnimator.ofFloat(this, "translationY", startHeight + padding, startHeight - padding, startHeight + padding);
-//                break;
-//            default:
-//                animator = ObjectAnimator.ofFloat(this, "translationY", startHeight - padding, startHeight + padding, startHeight - padding);
-//        }
         animator.setRepeatMode(ObjectAnimator.REVERSE);
         animator.setRepeatCount(ObjectAnimator.INFINITE);
         animator.setDuration(1500);
         animator.start();
-
-//        ObjectAnimator animatorx = ObjectAnimator.ofFloat(this, "translationX", 0, 0, 0);
-//        animator.setRepeatMode(ObjectAnimator.REVERSE);
-//        animator.setRepeatCount(ObjectAnimator.INFINITE);
-//        animatorx.setRepeatMode(ObjectAnimator.REVERSE);
-//        animatorx.setRepeatCount(ObjectAnimator.INFINITE);
-//
-//        AnimatorSet animatorSet = new AnimatorSet();
-//        animatorSet.playTogether(animator, animatorx);
-//        animatorSet.setDuration(1500);
-//        animatorSet.start();
     }
 
 }

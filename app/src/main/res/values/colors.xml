@@ -6,4 +6,6 @@
     <color name="text_color_66">#666666</color>
     <color name="text_color_fc">#fc7878</color>
     <color name="color_87d1ab">#87d1ab</color>
+    <color name="color_black">#000000</color>
+    <color name="color_white">#ffffff</color>
 </resources>

@@ -1,16 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.a55014.mytest.WaterContainer xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relative"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.a55014.mytest.MainActivity">
 
-    <!--<com.example.a55014.mytest.WaterView-->
-    <!--android:id="@+id/watery"-->
-    <!--android:layout_width="80dp"-->
-    <!--android:layout_height="80dp"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:src="@mipmap/water" />-->
+    <com.example.a55014.mytest.WaterContainer
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"></com.example.a55014.mytest.WaterContainer>
 
-</com.example.a55014.mytest.WaterContainer>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/auto_layout"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/radius_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="60dp"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="自动"
+                android:textColor="@color/color_white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="打开"
+                android:textColor="@color/color_white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="取消"
+                android:textColor="@color/color_white"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/start"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/start_auto" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>
