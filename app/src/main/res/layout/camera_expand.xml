@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/auto_layout"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/radius_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="60dp"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="自动"
+            android:textColor="@color/color_white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="打开"
+            android:textColor="@color/color_white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="取消"
+            android:textColor="@color/color_white"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="45dp"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/start"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/start_auto" />
+    </RelativeLayout>
+</FrameLayout>

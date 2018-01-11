@@ -38,6 +38,11 @@ import java.lang.reflect.Field;
 import java.text.NumberFormat;
 import java.util.List;
 
+/**
+ * @author: YangYong
+ * @date: 2018/1/11 16:43
+ * @desc:设备信息获取
+ */
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public class DeviceUtils {
     // 手机网络类型
@@ -439,6 +444,7 @@ public class DeviceUtils {
             activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
     }
+
     public static void setFullScreen(Activity activity) {
         WindowManager.LayoutParams params = activity.getWindow()
                 .getAttributes();
