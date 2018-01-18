@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context="com.example.a55014.mytest.MainActivity">
 
-    <com.example.a55014.mytest.WaterContainer
-        android:id="@+id/relative"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"></com.example.a55014.mytest.WaterContainer>
-
-    <com.example.a55014.mytest.ExpandContainer
+    <TextView
+        android:id="@+id/water_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"></com.example.a55014.mytest.ExpandContainer>
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="仿蚂蚁森林水滴"
+        android:textColor="@color/color_white" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/expand_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/water_tv"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="伸缩动画"
+        android:textColor="@color/color_white" />
+
+    <TextView
+        android:id="@+id/progress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/expand_tv"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="动态进度条"
+        android:textColor="@color/color_white" />
+</RelativeLayout>

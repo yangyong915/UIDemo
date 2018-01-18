@@ -1,16 +1,32 @@
 package com.example.a55014.mytest;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.ViewGroup;
+import android.view.View;
+import android.widget.TextView;
+
+import com.example.a55014.mytest.expand.ExpandActivity;
+import com.example.a55014.mytest.progress.ProgressActivity;
+import com.example.a55014.mytest.water.WaterActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
+/**
+ * crate by yy on 2018-1-18
+ * describle:UI特效集合管理器
+ */
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.relative)
-    WaterContainer relative;
+
+
+    @BindView(R.id.water_tv)
+    TextView waterTv;
+    @BindView(R.id.expand_tv)
+    TextView expandTv;
+    @BindView(R.id.progress_tv)
+    TextView progressTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,42 +36,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        int posx = (int) DeviceUtils.dpToPixel(this, 70);
-        int posy = (int) DeviceUtils.dpToPixel(this, 70);
-        addChildView(this, relative, 1, posx, posy);
-        addChildView(this, relative, 2, 2 * posx, 2 * posy);
-        addChildView(this, relative, 3, 3 * posx, posy);
-    }
-
-
-    /**
-     * 添加子水滴
-     *
-     * @param relative
-     * @param index    第几个
-     * @param posx     子控件初始位置x
-     * @param posy     子控件初始位置y
-     */
-    private void addChildView(final Context context, final WaterContainer relative, final int index, final int posx, final int posy) {
-        relative.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                int width = (int) DeviceUtils.dpToPixel(context, 60);
-                int height = (int) DeviceUtils.dpToPixel(context, 60);
-                ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(width, height);
-                WaterView waterView = new WaterView(context);
-                waterView.setPosition(index, posx, posy);
-                waterView.setLayoutParams(layoutParams);
-                relative.setChildPosition(posx, posy);
-                relative.addView(waterView);
-            }
-        }, (index - 1) * 300);
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    @OnClick({R.id.water_tv, R.id.expand_tv, R.id.progress_tv})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.water_tv:
+                startActivity(new Intent(this, WaterActivity.class));
+                break;
+            case R.id.expand_tv:
+                startActivity(new Intent(this, ExpandActivity.class));
+                break;
+            case R.id.progress_tv:
+                startActivity(new Intent(this, ProgressActivity.class));
+                break;
+        }
     }
 }

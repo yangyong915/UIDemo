@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.example.a55014.mytest.progress.ProgressActivity">
+
+    <TextView
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="刷新"
+        android:textColor="@color/color_white" />
+
+    <com.example.a55014.mytest.progress.MinProgressBar
+        android:id="@+id/progress_normal"
+        style="@style/ProgressBar_Mini"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="30dp" />
+
+    <com.example.a55014.mytest.progress.MyProgressBar
+        android:id="@+id/progress_value"
+        style="@style/ProgressBar_Max"
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:layout_marginTop="30dp" />
+
+    <com.example.a55014.mytest.progress.ProgressCircleView
+        android:id="@+id/progress_circle"
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp" />
+
+</LinearLayout>

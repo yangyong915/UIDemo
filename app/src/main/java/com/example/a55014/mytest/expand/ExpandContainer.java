@@ -1,4 +1,4 @@
-package com.example.a55014.mytest;
+package com.example.a55014.mytest.expand;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -11,6 +11,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.a55014.mytest.utils.DeviceUtils;
+import com.example.a55014.mytest.R;
 
 /**
  * Created by yy on 2018/1/11.

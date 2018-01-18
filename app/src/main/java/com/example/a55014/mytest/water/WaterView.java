@@ -1,4 +1,4 @@
-package com.example.a55014.mytest;
+package com.example.a55014.mytest.water;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -9,6 +9,9 @@ import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.example.a55014.mytest.utils.DeviceUtils;
+import com.example.a55014.mytest.R;
 
 /**
  * Created by yy on 2018/1/5.

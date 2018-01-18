@@ -20,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".mvpsimple.MvpActivity" />
+        <activity android:name=".expand.ExpandActivity" />
+        <activity android:name=".water.WaterActivity" />
+        <activity android:name=".progress.ProgressActivity"></activity>
     </application>
 
 </manifest>

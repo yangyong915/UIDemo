@@ -1,4 +1,4 @@
-package com.example.a55014.mytest;
+package com.example.a55014.mytest.utils;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
