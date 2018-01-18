@@ -1,4 +1,4 @@
-![mahua](mahua-logo.jpg)
+![mahua](https://github.com/yangyong915/WaterDemo/blob/master/GIF.gif)
 动画效果集合目前包含的动画效果有：
 1、仿支付宝蚂蚁森林浮动按钮，点击水滴后向固定的地收回并慢慢消失
 2、选项伸缩动画
