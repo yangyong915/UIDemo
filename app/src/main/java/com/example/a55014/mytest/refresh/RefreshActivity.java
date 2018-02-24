@@ -5,9 +5,10 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
 
 import com.example.a55014.mytest.R;
-import com.example.a55014.mytest.refresh.xRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +40,9 @@ public class RefreshActivity extends AppCompatActivity implements xRecyclerView.
         recycleAdapter = new RecycleAdapter(this, R.layout.energy_item, rankList);
         xrecyclerView.setAdapter(this, recycleAdapter, new LinearLayoutManager(this));
         xrecyclerView.setOnRefreshListener(this);
+
+        View header = LayoutInflater.from(this).inflate(R.layout.header, xrecyclerView, false);
+        xrecyclerView.addHeader(header);
     }
 
     @Override
@@ -47,7 +51,7 @@ public class RefreshActivity extends AppCompatActivity implements xRecyclerView.
             @Override
             public void run() {
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -73,7 +77,7 @@ public class RefreshActivity extends AppCompatActivity implements xRecyclerView.
             @Override
             public void run() {
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -83,7 +87,7 @@ public class RefreshActivity extends AppCompatActivity implements xRecyclerView.
                         if (rankList.size() > 40) {
                             xrecyclerView.refreshComplete(LoadingFooter.State.TheEnd, "");
                         } else {
-                            for (int i = 0; i < 5; i++) {
+                            for (int i = 0; i < 9; i++) {
                                 rankList.add("加载更多" + i);
                             }
                             recycleAdapter.notifyDataSetChanged();

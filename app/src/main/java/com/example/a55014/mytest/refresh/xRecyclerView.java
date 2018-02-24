@@ -63,17 +63,6 @@ public class xRecyclerView extends LinearLayout {
     }
 
     /**
-     * 添加尾部
-     *
-     * @param view
-     */
-    public void addFooter(View view) {
-        if (recyclerView != null) {
-            RecyclerViewUtils.setFooterView(recyclerView, view);
-        }
-    }
-
-    /**
      * 设置是否下拉刷新
      *
      * @param b

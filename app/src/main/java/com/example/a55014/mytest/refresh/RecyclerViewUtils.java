@@ -32,7 +32,6 @@ public class RecyclerViewUtils {
     /**
      * 设置FooterView
      *
-     * @param recyclerView
      * @param view
      */
     public static void setFooterView(RecyclerView recyclerView, View view) {
