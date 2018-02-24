@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="128px"
+    android:background="@color/color_white">
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="70px"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10px"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/text_color_99"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10px"
+        android:layout_toRightOf="@+id/number" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="28px"
+        android:layout_toRightOf="@+id/head"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="未命名"
+        android:textColor="@color/color_333333"
+        android:textSize="24px"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="10px"
+        android:layout_toRightOf="@+id/head"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="养成"
+            android:textColor="@color/text_color_99"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/bom_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0根竹子"
+            android:textColor="@color/color_333333"
+            android:textSize="24px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/energy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="28px"
+        android:text="总能量值:  0g"
+        android:textColor="@color/text_color_99" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30px"
+        android:background="@color/color_333333"
+        android:visibility="gone" />
+</RelativeLayout>

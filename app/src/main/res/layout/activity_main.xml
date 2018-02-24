@@ -43,4 +43,18 @@
         android:paddingRight="10dp"
         android:text="动态进度条"
         android:textColor="@color/color_white" />
+
+    <TextView
+        android:id="@+id/refresh_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/water_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="下拉刷新与上啦加载"
+        android:textColor="@color/color_white" />
 </RelativeLayout>

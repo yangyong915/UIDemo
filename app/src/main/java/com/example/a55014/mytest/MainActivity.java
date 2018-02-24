@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.example.a55014.mytest.expand.ExpandActivity;
 import com.example.a55014.mytest.progress.ProgressActivity;
+import com.example.a55014.mytest.refresh.RefreshActivity;
 import com.example.a55014.mytest.water.WaterActivity;
 
 import butterknife.BindView;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     TextView expandTv;
     @BindView(R.id.progress_tv)
     TextView progressTv;
+    @BindView(R.id.refresh_layout)
+    TextView refreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    @OnClick({R.id.water_tv, R.id.expand_tv, R.id.progress_tv})
+    @OnClick({R.id.water_tv, R.id.expand_tv, R.id.progress_tv, R.id.refresh_layout})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.water_tv:
@@ -51,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.progress_tv:
                 startActivity(new Intent(this, ProgressActivity.class));
+                break;
+            case R.id.refresh_layout:
+                startActivity(new Intent(this, RefreshActivity.class));
                 break;
         }
     }
