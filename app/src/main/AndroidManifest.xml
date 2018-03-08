@@ -23,7 +23,8 @@
         <activity android:name=".expand.ExpandActivity" />
         <activity android:name=".water.WaterActivity" />
         <activity android:name=".progress.ProgressActivity" />
-        <activity android:name=".refresh.RefreshActivity"></activity>
+        <activity android:name=".refresh.RefreshActivity" />
+        <activity android:name=".shape.ShapeActivity"></activity>
     </application>
 
 </manifest>
