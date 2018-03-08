@@ -1,3 +1,4 @@
+
 ![mahua](https://github.com/yangyong915/WaterDemo/blob/master/GIF.gif)
 
 动画效果集合目前包含的动画效果有：
@@ -9,6 +10,7 @@
     3、变色进度条及进度条动画
     
     4、基于shape的UI小工具类
+    
 具体使用请参考demo
 
 我的csdn博客：
