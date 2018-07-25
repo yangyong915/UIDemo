@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context="com.example.a55014.mytest.MainActivity">
-
     <TextView
         android:id="@+id/water_tv"
         android:layout_width="wrap_content"
@@ -70,5 +69,30 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="shape绘制图形"
+        android:textColor="@color/color_white" />
+
+    <TextView
+        android:id="@+id/web_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/shape_layout"
+        android:layout_alignBottom="@+id/shape_layout"
+        android:layout_alignStart="@+id/expand_tv"
+        android:layout_marginStart="17dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="web测试"
+        android:textColor="@color/color_white" />
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:text="伸缩动画"
         android:textColor="@color/color_white" />
 </RelativeLayout>

@@ -47,8 +47,8 @@ public class ExpandContainer extends FrameLayout {
     }
 
     private void init() {
-        shortX = (int) DeviceUtils.dpToPixel(mContext, 45);
-        longX = (int) DeviceUtils.dpToPixel(mContext, 270);
+        shortX = (int) DeviceUtils.dpToPixel(mContext, 52);
+        longX = (int) DeviceUtils.dpToPixel(mContext, 320);
         View mview = LayoutInflater.from(mContext).inflate(R.layout.camera_expand, null);
         auto = mview.findViewById(R.id.auto);
         open = mview.findViewById(R.id.open);
@@ -117,6 +117,7 @@ public class ExpandContainer extends FrameLayout {
                 int width = (Integer) valueAnimator.getAnimatedValue();
                 autoLayout.getLayoutParams().width = width;
                 autoLayout.requestLayout();
+                invalidate();
             }
         });
         animator.setDuration(500);

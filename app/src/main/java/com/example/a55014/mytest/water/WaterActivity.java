@@ -18,12 +18,15 @@ import butterknife.ButterKnife;
 public class WaterActivity extends AppCompatActivity {
     @BindView(R.id.relative)
     WaterContainer relative;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        DeviceUtils.setCustomDensity(this, getApplication());
         setContentView(R.layout.activity_water);
         ButterKnife.bind(this);
     }
+
     @Override
     protected void onStart() {
         super.onStart();

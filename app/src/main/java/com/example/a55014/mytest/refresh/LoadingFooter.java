@@ -29,6 +29,7 @@ public class LoadingFooter extends RelativeLayout {
     private TextView mEndText;
     private TextView mNoDataText;
     private TextView mNetworkText;
+
     public LoadingFooter(Context context) {
         super(context);
         init(context);
@@ -86,7 +87,7 @@ public class LoadingFooter extends RelativeLayout {
                 if (mNetworkErrorView != null) {
                     mNetworkErrorView.setVisibility(GONE);
                 }
-                if(mNoDataView!=null){
+                if (mNoDataView != null) {
                     mNoDataView.setVisibility(GONE);
                 }
                 break;
@@ -109,7 +110,7 @@ public class LoadingFooter extends RelativeLayout {
                 } else {
                     mLoadingView.setVisibility(VISIBLE);
                 }
-                if(mNoDataView!=null){
+                if (mNoDataView != null) {
                     mNoDataView.setVisibility(GONE);
                 }
                 mLoadingView.setVisibility(showView ? VISIBLE : GONE);
@@ -129,7 +130,7 @@ public class LoadingFooter extends RelativeLayout {
                 if (mNetworkErrorView != null) {
                     mNetworkErrorView.setVisibility(GONE);
                 }
-                if(mNoDataView!=null){
+                if (mNoDataView != null) {
                     mNoDataView.setVisibility(GONE);
                 }
                 if (mTheEndView == null) {
@@ -162,7 +163,7 @@ public class LoadingFooter extends RelativeLayout {
                     ViewStub viewStub = (ViewStub) findViewById(R.id.nodata_viewstub);
                     mNoDataView = viewStub.inflate();
 
-                    mNoDataText= (TextView) mNoDataView.findViewById(R.id.nodata_text);
+                    mNoDataText = (TextView) mNoDataView.findViewById(R.id.nodata_text);
                 } else {
                     mNoDataView.setVisibility(VISIBLE);
                 }
@@ -182,13 +183,13 @@ public class LoadingFooter extends RelativeLayout {
                 if (mTheEndView != null) {
                     mTheEndView.setVisibility(GONE);
                 }
-                if(mNoDataView!=null){
+                if (mNoDataView != null) {
                     mNoDataView.setVisibility(GONE);
                 }
                 if (mNetworkErrorView == null) {
                     ViewStub viewStub = (ViewStub) findViewById(R.id.network_error_viewstub);
                     mNetworkErrorView = viewStub.inflate();
-                    mNetworkText= (TextView) mNetworkErrorView.findViewById(R.id.network_text);
+                    mNetworkText = (TextView) mNetworkErrorView.findViewById(R.id.network_text);
                 } else {
                     mNetworkErrorView.setVisibility(VISIBLE);
                 }

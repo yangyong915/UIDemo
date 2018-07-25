@@ -3,15 +3,18 @@ package com.example.a55014.mytest.utils;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.Application;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.ClipboardManager;
+import android.content.ComponentCallbacks;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.net.ConnectivityManager;
@@ -854,6 +857,50 @@ public class DeviceUtils {
                 topView.setBackgroundColor(Color.BLUE);
             }
         }
+    }
+
+    private static float textDensity = 0;
+    private static float textScaledDensity = 0;
+
+    /**
+     * 今日头条的屏幕适配方案
+     * 根据当前设备物理尺寸和分辨率去动态计算density和densityDpi
+     * 同时也解决了用户修改系统字体的情况
+     *
+     * @param activity
+     * @param application
+     */
+    public static void setCustomDensity(@NonNull Activity activity, @NonNull final Application application) {
+        final DisplayMetrics displayMetrics = application.getResources().getDisplayMetrics();
+        if (textDensity == 0) {
+            textDensity = displayMetrics.density;
+            textScaledDensity = displayMetrics.scaledDensity;
+            application.registerComponentCallbacks(new ComponentCallbacks() {
+                @Override
+                public void onConfigurationChanged(Configuration configuration) {
+                    if (configuration != null && configuration.fontScale > 0) {
+                        textScaledDensity = application.getResources().getDisplayMetrics().scaledDensity;
+                    }
+                }
+
+                @Override
+                public void onLowMemory() {
+
+                }
+            });
+        }
+        final float targetDensity = displayMetrics.widthPixels / 360;
+        final float targetScaledDensity = targetDensity * (textScaledDensity / textDensity);
+        final int targetDpi = (int) (160 * targetDensity);
+
+        displayMetrics.density = targetDensity;
+        displayMetrics.scaledDensity = targetScaledDensity;
+        displayMetrics.densityDpi = targetDpi;
+
+        final DisplayMetrics activityDisplayMetrics = activity.getResources().getDisplayMetrics();
+        activityDisplayMetrics.density = targetDensity;
+        activityDisplayMetrics.scaledDensity = targetScaledDensity;
+        activityDisplayMetrics.densityDpi = targetDpi;
     }
 
 }

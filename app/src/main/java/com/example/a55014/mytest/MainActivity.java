@@ -3,6 +3,9 @@ package com.example.a55014.mytest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.SparseArray;
+import android.util.SparseBooleanArray;
+import android.util.SparseLongArray;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,7 +13,11 @@ import com.example.a55014.mytest.expand.ExpandActivity;
 import com.example.a55014.mytest.progress.ProgressActivity;
 import com.example.a55014.mytest.refresh.RefreshActivity;
 import com.example.a55014.mytest.shape.ShapeActivity;
+import com.example.a55014.mytest.utils.DeviceUtils;
 import com.example.a55014.mytest.water.WaterActivity;
+import com.example.a55014.mytest.web.WebActivity;
+
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        DeviceUtils.setCustomDensity(this, getApplication());
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
     }
@@ -44,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    @OnClick({R.id.water_tv, R.id.expand_tv, R.id.progress_tv, R.id.refresh_layout, R.id.shape_layout})
+    @OnClick({R.id.water_tv, R.id.expand_tv, R.id.progress_tv, R.id.refresh_layout, R.id.shape_layout, R.id.web_layout})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.water_tv:
@@ -61,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.shape_layout:
                 startActivity(new Intent(this, ShapeActivity.class));
+                break;
+            case R.id.web_layout:
+                startActivity(new Intent(this, WebActivity.class));
                 break;
         }
     }

@@ -24,7 +24,8 @@
         <activity android:name=".water.WaterActivity" />
         <activity android:name=".progress.ProgressActivity" />
         <activity android:name=".refresh.RefreshActivity" />
-        <activity android:name=".shape.ShapeActivity"></activity>
+        <activity android:name=".shape.ShapeActivity" />
+        <activity android:name=".web.WebActivity"></activity>
     </application>
 
 </manifest>

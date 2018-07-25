@@ -6,9 +6,9 @@ import android.view.View;
 
 /**
  * Created by cundong on 2015/11/9.
- *
+ * <p>
  * 分页展示数据时，RecyclerView的FooterView State 操作工具类
- *
+ * <p>
  * RecyclerView一共有几种State：Normal/Loading/Error/TheEnd
  */
 public class RecyclerViewStateUtils {
@@ -24,7 +24,7 @@ public class RecyclerViewStateUtils {
      */
     public static void setFooterViewState(Activity instance, RecyclerView recyclerView, int pageSize, LoadingFooter.State state, String content, View.OnClickListener errorListener) {
 
-        if(instance==null || instance.isFinishing()) {
+        if (instance == null || instance.isFinishing()) {
             return;
         }
 
@@ -36,23 +36,23 @@ public class RecyclerViewStateUtils {
 
         HeaderAndFooterRecyclerViewAdapter headerAndFooterAdapter = (HeaderAndFooterRecyclerViewAdapter) outerAdapter;
 
-       /* //只有一页的时候，就别加什么FooterView了
+        //只有一页的时候，就别加什么FooterView了
         if (headerAndFooterAdapter.getInnerAdapter().getItemCount() < pageSize) {
             return;
-        }*/
+        }
 
         LoadingFooter footerView;
         //已经有footerView了
         if (headerAndFooterAdapter.getFooterViewsCount() > 0) {
             footerView = (LoadingFooter) headerAndFooterAdapter.getFooterView();
-            footerView.setState(state,content);
+            footerView.setState(state, content);
 
             if (state == LoadingFooter.State.NetWorkError) {
                 footerView.setOnClickListener(errorListener);
             }
         } else {
             footerView = new LoadingFooter(instance);
-            footerView.setState(state,content);
+            footerView.setState(state, content);
 
             if (state == LoadingFooter.State.NetWorkError) {
                 footerView.setOnClickListener(errorListener);
@@ -88,10 +88,10 @@ public class RecyclerViewStateUtils {
     public static void setFooterViewState(RecyclerView recyclerView, LoadingFooter.State state, String content) {
         RecyclerView.Adapter outerAdapter = recyclerView.getAdapter();
         if (outerAdapter != null && outerAdapter instanceof HeaderAndFooterRecyclerViewAdapter) {
-//            if (((HeaderAndFooterRecyclerViewAdapter) outerAdapter).getFooterViewsCount() > 0) {
+            if (((HeaderAndFooterRecyclerViewAdapter) outerAdapter).getFooterViewsCount() > 0) {
                 LoadingFooter footerView = (LoadingFooter) ((HeaderAndFooterRecyclerViewAdapter) outerAdapter).getFooterView();
-                footerView.setState(state,content);
-//            }
+                footerView.setState(state, content);
+            }
         }
     }
 }

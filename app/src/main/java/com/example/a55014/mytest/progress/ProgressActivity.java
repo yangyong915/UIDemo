@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.a55014.mytest.R;
+import com.example.a55014.mytest.utils.DeviceUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,6 +29,7 @@ public class ProgressActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        DeviceUtils.setCustomDensity(this, getApplication());
         setContentView(R.layout.activity_progress);
         ButterKnife.bind(this);
 

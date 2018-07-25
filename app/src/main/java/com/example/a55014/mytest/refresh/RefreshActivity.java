@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.example.a55014.mytest.R;
+import com.example.a55014.mytest.utils.DeviceUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class RefreshActivity extends AppCompatActivity implements xRecyclerView.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        DeviceUtils.setCustomDensity(this, getApplication());
         setContentView(R.layout.activity_refresh);
         ButterKnife.bind(this);
 

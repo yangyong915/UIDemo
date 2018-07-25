@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.a55014.mytest.R;
+import com.example.a55014.mytest.utils.DeviceUtils;
 
 import static com.example.a55014.mytest.refresh.LoadingFooter.State.Loading;
 import static com.example.a55014.mytest.refresh.LoadingFooter.State.NoData;
