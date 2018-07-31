@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context="com.example.a55014.mytest.MainActivity">
+
     <TextView
         android:id="@+id/water_tv"
         android:layout_width="wrap_content"
@@ -87,10 +88,25 @@
         android:textColor="@color/color_white" />
 
     <TextView
+        android:id="@+id/select_city"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/refresh_layout"
+        android:layout_marginTop="168dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="字母索引"
+        android:textColor="@color/color_white"
+        tools:text="字母索引" />
+
+    <TextView
         android:id="@+id/line"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_centerInParent="true"
         android:background="@drawable/btn_bg"
         android:gravity="center"
         android:text="伸缩动画"

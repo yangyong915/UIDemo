@@ -864,7 +864,7 @@ public class DeviceUtils {
 
     /**
      * 今日头条的屏幕适配方案
-     * 根据当前设备物理尺寸和分辨率去动态计算density和densityDpi
+     * 根据当前设备物理尺寸和分辨率去动态计算density、densityDpi、scaledDensity
      * 同时也解决了用户修改系统字体的情况
      *
      * @param activity

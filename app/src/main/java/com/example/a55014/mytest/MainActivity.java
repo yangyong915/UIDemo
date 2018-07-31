@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.a55014.mytest.expand.ExpandActivity;
 import com.example.a55014.mytest.progress.ProgressActivity;
 import com.example.a55014.mytest.refresh.RefreshActivity;
+import com.example.a55014.mytest.selectcity.SelectCityActivity;
 import com.example.a55014.mytest.shape.ShapeActivity;
 import com.example.a55014.mytest.utils.DeviceUtils;
 import com.example.a55014.mytest.water.WaterActivity;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    @OnClick({R.id.water_tv, R.id.expand_tv, R.id.progress_tv, R.id.refresh_layout, R.id.shape_layout, R.id.web_layout})
+    @OnClick({R.id.water_tv, R.id.expand_tv, R.id.progress_tv, R.id.refresh_layout, R.id.shape_layout, R.id.web_layout, R.id.select_city})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.water_tv:
@@ -72,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.web_layout:
                 startActivity(new Intent(this, WebActivity.class));
+                break;
+            case R.id.select_city:
+                startActivity(new Intent(this, SelectCityActivity.class));
                 break;
         }
     }
