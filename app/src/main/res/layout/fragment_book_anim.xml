@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:text="第一页"
+        android:textColor="@color/colorAccent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_move"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="visible"
+        android:background="@color/color_87d1ab">
+
+        <com.example.a55014.mytest.expand.FoldTextView
+            android:id="@+id/tv_move"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="@color/text_color_99"
+            android:padding="10dp"
+            android:text="开关" />
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="one 作业讲评" />
+    </RelativeLayout>
+</RelativeLayout>

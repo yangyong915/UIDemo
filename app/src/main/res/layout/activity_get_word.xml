@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+    <com.example.a55014.mytest.expand.library.GetWordTextView
+        android:id="@+id/english_get_word_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        app:highlightColor="@color/colorAccent"
+        app:highlightText="you"
+        app:language="English"
+        app:selectedColor="@color/colorPrimary" />
+
+</RelativeLayout>

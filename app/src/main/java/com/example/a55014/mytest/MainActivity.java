@@ -17,8 +17,6 @@ import com.ctetin.expandabletextviewlibrary.app.StatusType;
 import com.example.a55014.mytest.bottomsheet.PlayBottomSheetDialog;
 import com.example.a55014.mytest.expand.ExpandActivity;
 import com.example.a55014.mytest.game.GameActivity;
-import com.example.a55014.mytest.geogebra.BlurActivity;
-import com.example.a55014.mytest.geogebra.GeogebraActivity;
 import com.example.a55014.mytest.pad.AppEntity;
 import com.example.a55014.mytest.pad.FocusTestActivity;
 import com.example.a55014.mytest.pad.Launcher3BroadcastReceiver;
@@ -142,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, PlayBottomSheetDialog.class));
                 break;
             case R.id.geogebra_tv:
-                startActivity(new Intent(this, GeogebraActivity.class));
                 break;
             case R.id.tv_agree:
                 ivAgree.setVisibility(View.VISIBLE);
@@ -157,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, GameActivity.class));
                 break;
             case R.id.tv_blur:
-                startActivity(new Intent(this, BlurActivity.class));
                 break;
             case R.id.tv_focus:
                 startActivity(new Intent(this, FocusTestActivity.class));
