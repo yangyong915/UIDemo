@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    tools:context=".game.GameActivity">
+
+    <TextView
+        android:id="@+id/tv_cards_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="卡牌游戏"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_luck_pan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="大转盘游戏"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="小鸭子游戏"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="艺术馆游戏"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="排行榜游戏"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="小车游戏"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+
+    <com.example.a55014.mytest.game.view.LinePicView
+        android:id="@+id/pic_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-20dp"
+        android:background="@drawable/bottle_chameleon_tongue"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="my name is 1 yy\n\n\n\n\n\ntmy name is2 yy\n\n\n\n\n\nmy
+                name 3 yy\n\n\n\n\n\nmy name is4 yy\n\n\n\n\n\ntmy name is5 y\n\n\n\n\n\nmy
+                name is6 yy\n\n\n\n\n\nmy name is7 yy\n\n\n\n\n\nmy name is8 yy\n\n\n\n\n\nmy
+                name9 is yy\n\n\n\n\n\nmy name is10 yy\n\n\n\n\n\nmy name is11 yy\n\n\n\n\n\nmy
+                name is yy\n\n"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

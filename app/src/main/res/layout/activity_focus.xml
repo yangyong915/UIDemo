@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <RadioGroup
+        android:id="@+id/rg_teach_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_teach_book"
+            android:layout_width="78dp"
+            android:layout_height="30dp"
+            android:background="@drawable/teach_btn_bg_selector"
+            android:button="@null"
+            android:checked="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="我的课程"
+            android:textColor="@color/teach_title_color"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_teach_help"
+            android:layout_width="78dp"
+            android:layout_height="30dp"
+            android:background="@drawable/teach_btn_bg_selector"
+            android:layout_marginStart="20dp"
+            android:button="@null"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="全部课程"
+            android:textColor="@color/teach_title_color"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            android:layout_width="78dp"
+            android:layout_height="30dp"
+            android:background="@drawable/teach_btn_bg_selector"
+            android:button="@null"
+            android:checked="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="我的1"
+            android:textColor="@color/teach_title_color"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_all"
+            android:layout_width="78dp"
+            android:layout_height="30dp"
+            android:background="@drawable/teach_btn_bg_selector"
+            android:layout_marginStart="20dp"
+            android:button="@null"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@color/teach_title_color"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+</LinearLayout>

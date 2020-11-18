@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GetWordTextView">
+        <attr name="highlightColor" format="reference|color" />
+        <attr name="highlightText" format="reference|string" />
+        <attr name="selectedColor" format="reference|color" />
+        <attr name="language">
+            <enum name="English" value="0" />
+            <enum name="Chinese" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LaTeXView">
+        <attr name="lv_latexText" format="string" />
+        <attr name="lv_size" format="float" />
+        <attr name="lv_style" format="enum">
+            <enum name="display" value="0" />
+            <enum name="text" value="2" />
+            <enum name="script" value="4" />
+            <enum name="script_script" value="6" />
+        </attr>
+        <attr name="lv_type">
+            <flag name="serif" value="0" />
+            <flag name="sansserif" value="1" />
+            <flag name="bold" value="2" />
+            <flag name="italic" value="4" />
+            <flag name="roman" value="8" />
+            <flag name="typewriter" value="16" />
+        </attr>
+        <attr name="lv_foregroundColor" format="color" />
+        <attr name="lv_backgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="luckpan">
+        <attr name="pannum" format="integer" />
+        <attr name="names" format="reference" />
+        <attr name="icons" format="reference" />
+    </declare-styleable>
+
+    <color name="default_overlay_color">#AA109787</color>
+    <declare-styleable name="PxBlurringView">
+        <attr name="blurRadius" format="integer" />
+        <attr name="downsampleFactor" format="integer" />
+        <attr name="overlayColor" format="color" />
+        <attr name="overlayDrawable" format="reference" />
+    </declare-styleable>
+    <integer name="default_blur_radius">15</integer>
+    <integer name="default_downsample_factor">8</integer>
+</resources>

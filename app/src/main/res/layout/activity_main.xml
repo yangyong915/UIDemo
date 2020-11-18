@@ -1,114 +1,309 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.a55014.mytest.MainActivity">
 
-    <TextView
-        android:id="@+id/water_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="仿蚂蚁森林水滴"
-        android:textColor="@color/color_white" />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/expand_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/water_tv"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="伸缩动画"
-        android:textColor="@color/color_white" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
-    <TextView
-        android:id="@+id/progress_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/expand_tv"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="动态进度条"
-        android:textColor="@color/color_white" />
+            <TextView
+                android:id="@+id/water_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="仿蚂蚁森林水滴"
+                android:textColor="@color/color_white" />
 
-    <TextView
-        android:id="@+id/refresh_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/water_tv"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="下拉刷新与上啦加载"
-        android:textColor="@color/color_white" />
+            <TextView
+                android:id="@+id/expand_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/water_tv"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="伸缩动画"
+                android:textColor="@color/color_white" />
 
-    <TextView
-        android:id="@+id/shape_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/refresh_layout"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="shape绘制图形"
-        android:textColor="@color/color_white" />
+            <TextView
+                android:id="@+id/progress_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/expand_tv"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="动态进度条"
+                android:textColor="@color/color_white" />
 
-    <TextView
-        android:id="@+id/web_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/shape_layout"
-        android:layout_alignBottom="@+id/shape_layout"
-        android:layout_alignStart="@+id/expand_tv"
-        android:layout_marginStart="17dp"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="web测试"
-        android:textColor="@color/color_white" />
+            <TextView
+                android:id="@+id/refresh_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/water_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="下拉刷新与上啦加载"
+                android:textColor="@color/color_white" />
 
-    <TextView
-        android:id="@+id/select_city"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/refresh_layout"
-        android:layout_marginTop="168dp"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="字母索引"
-        android:textColor="@color/color_white"
-        tools:text="字母索引" />
+            <TextView
+                android:id="@+id/shape_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/refresh_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="shape绘制图形"
+                android:textColor="@color/color_white" />
 
-    <TextView
-        android:id="@+id/line"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:text="伸缩动画"
-        android:textColor="@color/color_white" />
-</RelativeLayout>
+            <TextView
+                android:id="@+id/web_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/shape_layout"
+                android:layout_alignStart="@+id/expand_tv"
+                android:layout_alignBottom="@+id/shape_layout"
+                android:layout_marginStart="17dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="web测试"
+                android:textColor="@color/color_white" />
+
+            <TextView
+                android:id="@+id/select_city"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/refresh_layout"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="字母索引"
+                android:textColor="@color/color_white"
+                tools:text="字母索引" />
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/refresh_layout"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="伸缩动画"
+                android:textColor="@color/color_white" />
+
+            <TextView
+                android:id="@+id/bottom_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="208dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="底部滑动弹窗"
+                android:textColor="@color/color_white"
+                tools:text="底部滑动弹窗" />
+
+            <TextView
+                android:id="@+id/geogebra_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bottom_dialog"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="geogebra"
+                android:textColor="@color/color_white"
+                tools:text="geogebra" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bottom_dialog"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="点赞"
+                    android:textColor="@color/color_white"
+                    tools:text="点赞" />
+
+                <ImageView
+                    android:id="@+id/iv_agree"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"
+                    tools:src="@mipmap/agree" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bottom_dialog"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="游戏动画"
+                android:textColor="@color/color_white"
+                tools:text="游戏动画" />
+
+            <TextView
+                android:id="@+id/tv_blur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/geogebra_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="毛玻璃效果"
+                android:textColor="@color/color_white"
+                tools:text="毛玻璃效果" />
+
+            <TextView
+                android:id="@+id/tv_release_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_blur"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="解控pad 浙教app"
+                android:textColor="@color/color_white"
+                tools:text="解控pad" />
+
+            <TextView
+                android:id="@+id/tv_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_blur"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="tv焦点测试"
+                android:textColor="@color/color_white"
+                tools:text="tv焦点测试" />
+
+            <TextView
+                android:id="@+id/tv_start_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_blur"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="调起app并传参"
+                android:textColor="@color/color_white"
+                tools:text="调起app并传参" />
+
+            <com.ctetin.expandabletextviewlibrary.ExpandableTextView
+                android:id="@+id/ep_01"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_game"
+                android:layout_margin="15dp"
+                android:lineSpacingExtra="4dp"
+                android:textSize="14sp"
+                app:ep_contract_color="@color/colorAccent"
+                app:ep_contract_text="收回"
+                app:ep_expand_text="展开"
+                app:ep_max_line="3"
+                app:ep_need_animation="true"
+                app:ep_need_contract="true"
+                app:ep_need_expand="true" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_blu"
+                    android:layout_width="300dp"
+                    android:layout_height="400dp"
+                    android:background="@mipmap/pad_test" />
+
+                <com.example.a55014.mytest.utils.BlurringView
+                    android:id="@+id/blu_view"
+                    android:layout_width="200dp"
+                    android:layout_height="59dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="142dp"
+                    app:blurRadius="5"
+                    app:downsampleFactor="14"
+                    app:overlayColor="#99FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/iv_bottom"
+                    android:layout_width="300dp"
+                    android:layout_height="59dp"
+                    android:layout_marginTop="340dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/pad_app_bottom_bg" />
+            </FrameLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

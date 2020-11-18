@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.a55014.mytest">
 
     <!-- 访问网络，网络定位需要上网 -->
@@ -13,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +30,16 @@
         <activity android:name=".refresh.RefreshActivity" />
         <activity android:name=".shape.ShapeActivity" />
         <activity android:name=".web.WebActivity" />
-        <activity android:name=".selectcity.SelectCityActivity"></activity>
+        <activity android:name=".selectcity.SelectCityActivity" />
+        <activity android:name=".pad.FocusTestActivity" />
+        <receiver android:name=".pad.TestReceiver"
+            android:permission="true"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="com.zhl.test" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

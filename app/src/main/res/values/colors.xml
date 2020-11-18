@@ -11,5 +11,8 @@
     <color name="transparent">#00000000</color>
     <color name="text_color_99">#999999</color>
     <color name="color_333333">#333333</color>
+    <color name="color_half_333333">#80333333</color>
+    <color name="color_half_white">#80ffffff</color>
+    <color name="color_15C2C2">#15C2C2</color>
 
 </resources>

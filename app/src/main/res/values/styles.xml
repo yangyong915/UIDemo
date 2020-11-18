@@ -17,7 +17,9 @@
         </item>
         <item name="android:progressDrawable">@drawable/progressbar_mini</item>
     </style>
-
+    <style name="myTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/color_white</item>
+    </style>
     <style name="ProgressBar_Max" parent="@android:style/Widget.ProgressBar.Horizontal">
         <item name="android:maxHeight">25dip</item>
         <item name="android:minHeight">4dip</item>

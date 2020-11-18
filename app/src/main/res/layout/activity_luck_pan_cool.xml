@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:luckpan="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game.activity.LuckPanCoolActivity">
+
+    <com.example.a55014.mytest.game.view.LuckPanCoolLayout
+        android:id="@+id/luckpan_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent">
+
+        <com.example.a55014.mytest.game.view.RotatePan
+            android:id="@+id/rotatePan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            luckpan:icons="@array/icons"
+            luckpan:names="@array/names"
+            luckpan:pannum="8" />
+
+        <ImageView
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="rotation"
+            android:src="@mipmap/node"
+            android:tag="startbtn"
+            tools:ignore="OnClick" />
+
+
+    </com.example.a55014.mytest.game.view.LuckPanCoolLayout>
+
+    <TextView
+        android:id="@+id/tv_luck_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="大转盘简单版本"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+</FrameLayout>

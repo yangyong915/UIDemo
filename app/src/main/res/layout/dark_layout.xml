@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_bg"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/fl_words"
+        android:layout_width="450dp"
+        android:layout_height="300dp"
+        android:clipChildren="false"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_words_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="渐变"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:text="平移"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="20dp"
+        android:text="收起字母"
+        android:textColor="@color/color_white"
+        tools:ignore="HardcodedText" />
+</FrameLayout>
